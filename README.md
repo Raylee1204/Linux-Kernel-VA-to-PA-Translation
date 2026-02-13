@@ -32,7 +32,8 @@
 要將邏輯位址轉換為實體位址，核心會依序查詢這些表格：
 `pgd_t` -> `pud_t` -> `pmd_t` -> `pte_t` -> 取得實體位址。
 
-![Linux Paging Model](assets/linux_paging_model.png)
+<img width="685" height="483" alt="image" src="https://github.com/user-attachments/assets/fd7e7fb8-3512-4c64-949a-e55417982773" />
+
 *(圖：Linux 分頁模型遍歷流程)*
 
 ### 2. 分頁表項目 (PTE) 結構
@@ -41,7 +42,8 @@
 * **PTE_PFN_MASK**: 用於取出 PFN (位元 12-51)。
 * **PAGE_MASK**: 用於處理 Offset (最後 12 位元)。
 
-![64bit PTE](assets/pte_structure.png)
+<img width="869" height="569" alt="image" src="https://github.com/user-attachments/assets/103457f1-177f-4ec1-9ed6-e50f33d50fbb" />
+
 *(圖：64-bit Page Table Entry 結構)*
 
 ### 3. 關鍵核心函式
